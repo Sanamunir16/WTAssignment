@@ -185,5 +185,61 @@ body {
   line-height: 1.5;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.biodata-container {
+  display: flex; /* side by side layout */
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  align-items: center; /* vertical alignment */
+  gap: 30px; /* space between photo and data */
+}
+
+.photo {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50% / 40%; /* oval shape */
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.data {
+  flex: 1; /* take remaining space */
+}
+
+.data h1 {
+  margin-top: 0;
+  color: #333;
+}
+
+.data p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* Optional: responsive for small screens */
+@media (max-width: 600px) {
+  .biodata-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .photo {
+    width: 150px;
+    height: 180px;
+    margin-bottom: 20px;
+  }
+}
+
 
 
