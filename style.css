@@ -122,8 +122,8 @@ body {
 }
 
 .photo {
-  width: 180px;
-  height: 220px;
+  width: 120px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50% / 40%; /* oval shape */
   border: 2px solid #ccc;
@@ -163,8 +163,8 @@ body {
 }
 
 .photo {
-  width: 180px;
-  height: 220px;
+  width: 90px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50% / 40%; /* oval shape */
   border: 2px solid #ccc;
@@ -247,6 +247,7 @@ body {
     margin-bottom: 20px;
   }
 }
+
 
 
 
