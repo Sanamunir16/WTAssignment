@@ -74,14 +74,49 @@ th, td {
     flex: 1; /* take remaining space on the left */
 }
 
-/* Photo Section (screen + print) */
+/* Photo Section (screen display) */
 .photo img {
-    width: 2in;                 /* exact passport width */
-    height: 2in;                /* exact passport height */
+    width: 150px;               /* smaller size on screen */
+    height: 150px;              /* square */
     object-fit: cover;          /* crop neatly */
     border-radius: 0;           /* square shape */
     border: 2px solid #ccc;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+    .biodata-container {
+        flex-direction: column;   /* stack vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .photo img {
+        width: 120px;             /* smaller on mobile */
+        height: 120px;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;              /* full width on mobile */
+    }
+}
+
+/* Print-friendly passport size */
+@media print {
+    .photo img {
+        width: 2in;               /* exact passport width */
+        height: 2in;              /* exact passport height */
+        border: 1px solid #000;   /* darker border for print */
+        box-shadow: none;         /* remove shadow for clean print */
+    }
+
+    table {
+        width: 100%;              /* use full page width when printing */
+    }
+
+    body {
+        background: white;        /* no background color in print */
+    }
+}
