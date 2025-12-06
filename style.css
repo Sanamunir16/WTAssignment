@@ -118,3 +118,16 @@ th, td {
 }
 
 
+/* Passport Size Photo */
+.passport-photo {
+    width: 150px;       /* Passport-size ratio */
+    height: 190px;      /* Matches 3.5cm x 4.5cm proportions */
+    border: 3px solid #333;
+    border-radius: 6px;
+    object-fit: cover;  /* Makes the photo fit properly */
+    margin-bottom: 20px;
+}
+
+
+
+
