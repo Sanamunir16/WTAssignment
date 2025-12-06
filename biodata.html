@@ -7,16 +7,6 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
-<style>
-    /* Inline CSS for passport photo size */
-    .photo-section img {
-        width: 2in;   /* 2 inches wide */
-        height: 2in;  /* 2 inches tall */
-        object-fit: cover; /* ensures proper cropping */
-        border: 1px solid #000; /* optional border */
-    }
-</style>
-
 </head>
 <body>
 
@@ -30,28 +20,28 @@
     <a href="biodata.html">Bio-data</a>
 </nav>
 
-<section>
+<section class="biodata-container">
 
-<!-- PHOTO SECTION -->
-<div class="photo-section">
-    <img src="sana_photo.jpg" alt="User Photo">
-</div>
+    <!-- DATA SECTION (left side) -->
+    <div class="data">
+        <table>
+            <tr><th>Name</th><td>Sana Munir</td></tr>
+            <tr><th>Gender</th><td>Female</td></tr>
+            <tr><th>Father's Name</th><td>Muneer Ahmed</td></tr>
+            <tr><th>Mother's Name</th><td>Ayesha Rizwana</td></tr>
+            <tr><th>Date of Birth</th><td>16 May</td></tr>
+            <tr><th>Address</th><td>SG Palya Bangalore, Karnataka</td></tr>
+            <tr><th>Languages Known</th><td>English, Hindi, Urdu, Kannada</td></tr>
+            <tr><th>Nationality</th><td>Indian</td></tr>
+        </table>
+    </div>
 
-<table>
-    <tr><th>Name</th><td>Sana munir</td></tr>
-    <tr><th>Gender</th><td>Female</td></tr>
-    <tr><th>Father's Name</th><td>Muneer Ahmed</td></tr>
-    <tr><th>Mother's Name</th><td>Ayesha Rizwana</td></tr>
-    <tr><th>Date of Birth</th><td>16 May</td></tr>
-    <tr><th>Address</th><td>SG Palya Bangalore,Karnataka</td></tr>
-    <tr><th>Languages Known</th><td>English, Hindi, Urdu, Kannada</td></tr>
-    <tr><th>Nationality</th><td>Indian</td></tr>
-</table>
+    <!-- PHOTO SECTION (right side) -->
+    <div class="photo">
+        <img src="sana_photo.jpg" alt="User Photo">
+    </div>
 
 </section>
 
 </body>
 </html>
-
-
-
