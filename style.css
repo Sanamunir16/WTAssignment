@@ -105,29 +105,19 @@ th, td {
 
 /* Photo Section */
 .photo-section {
-    width: 160px;
+    float: right;          /* Move photo to the right side */
+    width: 150px;          /* Passport photo width */
+    height: 190px;         /* Passport photo height */
+    margin-left: 20px;     /* Space between table and photo */
     margin-bottom: 20px;
 }
 
 .photo-section img {
-    width: 160px;
-    height: 190px;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Fit image within container */
     border: 3px solid #333;
-    border-radius: 10px;
+    border-radius: 50% / 50%;  /* Oval shape */
 }
-
-
-/* Passport Size Photo */
-.passport-photo {
-    width: 150px;       /* Passport-size ratio */
-    height: 190px;      /* Matches 3.5cm x 4.5cm proportions */
-    border: 3px solid #333;
-    border-radius: 6px;
-    object-fit: cover;  /* Makes the photo fit properly */
-    margin-bottom: 20px;
-}
-
-
 
 
