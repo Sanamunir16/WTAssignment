@@ -38,7 +38,6 @@ section {
 /* Table */
 table {
     border-collapse: collapse;
-    width: 100%;
     background: white;
 }
 th, td {
@@ -58,20 +57,19 @@ th, td {
 /* Biodata Container */
 .biodata-container {
     display: flex;              /* side-by-side layout */
-    justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start;    /* align photo with top of table */
+    gap: 20px;                  /* space between table and photo */
     max-width: 900px;
     margin: auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    gap: 30px;                  /* space between photo and data */
 }
 
 /* Data Section */
 .data {
-    flex: 1; /* take remaining space on the left */
+    flex: 1; /* table takes available space */
 }
 
 /* Responsive for smaller screens */
@@ -84,23 +82,5 @@ th, td {
 
     table {
         width: 100%;              /* full width on mobile */
-    }
-}
-
-/* Print-friendly passport size */
-@media print {
-    .photo img {
-        width: 2in;               /* exact passport width */
-        height: 2in;              /* exact passport height */
-        border: 1px solid #000;   /* darker border for print */
-        box-shadow: none;         /* remove shadow for clean print */
-    }
-
-    table {
-        width: 100%;              /* use full page width when printing */
-    }
-
-    body {
-        background: white;        /* no background color in print */
     }
 }
