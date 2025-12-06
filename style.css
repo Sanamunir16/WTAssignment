@@ -74,28 +74,12 @@ th, td {
     flex: 1; /* take remaining space on the left */
 }
 
-/* Photo Section (screen display) */
-.photo img {
-    width: 150px;               /* smaller size on screen */
-    height: 150px;              /* square */
-    object-fit: cover;          /* crop neatly */
-    border-radius: 0;           /* square shape */
-    border: 2px solid #ccc;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
 /* Responsive for smaller screens */
 @media (max-width: 600px) {
     .biodata-container {
         flex-direction: column;   /* stack vertically */
         align-items: center;
         text-align: center;
-    }
-
-    .photo img {
-        width: 120px;             /* smaller on mobile */
-        height: 120px;
-        margin-bottom: 20px;
     }
 
     table {
