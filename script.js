@@ -6,13 +6,13 @@ $(document).ready(function () {
     // Show popup only on Home Page (index.html)
     if (window.location.pathname.includes("index.html") || window.location.pathname.endsWith("/")) {
         setTimeout(function () {
-            $("#welcomePopup").addClass("show");
-        }, 800);
+            $("#welcomePopup").css("display", "flex");
+        }, 500);
     }
 
-    // Close popup
-    $("#closePopup").click(function () {
-        $("#welcomePopup").removeClass("show");
+    // Close popup (matches class="popup-close")
+    $(".popup-close").click(function () {
+        $("#welcomePopup").css("display", "none");
     });
 
     // Smooth page transitions
@@ -23,4 +23,5 @@ $(document).ready(function () {
         });
         e.preventDefault();
     });
+
 });
