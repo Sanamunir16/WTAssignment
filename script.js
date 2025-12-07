@@ -1,27 +1,16 @@
 $(document).ready(function () {
 
-    // Fade animation on headings
+    // Fade effect for heading
     $(".fade").addClass("show");
 
-    // Show popup only on Home Page (index.html)
-    if (window.location.pathname.includes("index.html") || window.location.pathname.endsWith("/")) {
-        setTimeout(function () {
-            $("#welcomePopup").css("display", "flex");
-        }, 500);
-    }
+    // Always show popup on homepage
+    setTimeout(() => {
+        $("#welcomePopup").css("display", "flex");
+    }, 500);
 
-    // Close popup (matches class="popup-close")
+    // Close popup
     $(".popup-close").click(function () {
         $("#welcomePopup").css("display", "none");
-    });
-
-    // Smooth page transitions
-    $("nav a").click(function (e) {
-        let link = $(this).attr("href");
-        $("body").fadeOut(300, function () {
-            window.location.href = link;
-        });
-        e.preventDefault();
     });
 
 });
