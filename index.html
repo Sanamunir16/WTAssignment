@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Home - Assignment-06</title>
 <link rel="stylesheet" href="style.css">
-   
+
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -29,19 +29,16 @@
     <p>This website contains my Resume and Bio-data created using HTML, CSS, and JavaScript/jQuery.</p>
 </section>
 
-
-<!-- POPUP WINDOW -->
-<div id="welcomePopup" class="popup">
-    <div class="popup-content">
+<!-- ========================= -->
+<!--      POPUP MODAL HTML     -->
+<!-- ========================= -->
+<div class="popup-overlay" id="welcomePopup">
+    <div class="popup-box">
         <h2>Welcome to My Website</h2>
         <p>Hello Naziya mam, glad to see you here!</p>
-        <button id="closePopup">OK</button>
+        <button class="popup-close" onclick="closePopup()">OK</button>
     </div>
 </div>
 
-
 </body>
 </html>
-
-
-
