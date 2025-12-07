@@ -39,10 +39,12 @@ section {
 table {
     border-collapse: collapse;
     background: white;
+    width: 100%;              /* enlarged table */
+    font-size: 16px;          /* slightly bigger text */
 }
 th, td {
     border: 1px solid #333;
-    padding: 10px;
+    padding: 12px;
 }
 
 /* Fade Animation */
@@ -58,8 +60,9 @@ th, td {
 .biodata-container {
     display: flex;
     align-items: flex-start;
-    gap: 10px; /* reduced gap so photo is closer to table */
-    max-width: 900px;
+    justify-content: space-between; /* table left, photo right */
+    gap: 20px;
+    max-width: 1000px;              /* larger container */
     margin: auto;
     padding: 20px;
     background-color: #fff;
@@ -69,15 +72,14 @@ th, td {
 
 /* Data Section */
 .data {
-    flex: 1;
+    flex: 2; /* table takes more space */
 }
 
 /* Square Photo Section */
 .photo-section {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     flex-shrink: 0;
-    margin-right: 10px; /* keeps photo close to table */
 }
 .photo-section img {
     width: 100%;
@@ -95,12 +97,12 @@ th, td {
         text-align: center;
     }
 
-    table {
+    .data {
         width: 100%;
     }
 
     .photo-section {
-        margin: 0 0 15px 0;
+        margin-top: 15px;
     }
 }
 
@@ -145,4 +147,21 @@ th, td {
 .popup-close {
     margin-top: 15px;
     padding: 10px 20px;
-    background
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.popup-close:hover {
+    background: #555;
+}
+
+/* Animation */
+@keyframes popupZoom {
+    0% { transform: scale(0.4); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
