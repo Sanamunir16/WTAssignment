@@ -58,7 +58,7 @@ th, td {
 .biodata-container {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px; /* reduced gap so photo is closer to table */
     max-width: 900px;
     margin: auto;
     padding: 20px;
@@ -72,20 +72,19 @@ th, td {
     flex: 1;
 }
 
-/* Passport-size Oval Photo */
+/* Square Photo Section */
 .photo-section {
-    float: right;
     width: 150px;
-    height: 190px;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    height: 150px;
+    flex-shrink: 0;
+    margin-right: 10px; /* keeps photo close to table */
 }
 .photo-section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border: 3px solid #333;
-    border-radius: 50% / 50%;
+    border: 2px solid #333;
+    border-radius: 8px; /* square with slightly rounded corners */
 }
 
 /* Responsive */
@@ -98,6 +97,10 @@ th, td {
 
     table {
         width: 100%;
+    }
+
+    .photo-section {
+        margin: 0 0 15px 0;
     }
 }
 
@@ -142,21 +145,4 @@ th, td {
 .popup-close {
     margin-top: 15px;
     padding: 10px 20px;
-    background: #333;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-.popup-close:hover {
-    background: #555;
-}
-
-/* Animation */
-@keyframes popupZoom {
-    0% { transform: scale(0.4); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-}
+    background
